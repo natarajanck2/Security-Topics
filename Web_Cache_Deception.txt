@@ -1,0 +1,79 @@
+Web cache deception is a security vulnerability that tricks web caching mechanisms into storing and serving sensitive data to unauthorized users. By exploiting this vulnerability, attackers can gain access to confidential information, including session tokens, personal data, or private web pages.
+
+In this blog, we’ll uncover web cache deception with a simple real-life story, its impact, and strategies to prevent it.
+
+What is Web Cache Deception?
+
+Web caching improves performance by storing copies of web pages or resources for reuse. When an attacker manipulates the caching mechanism, sensitive pages can be cached and served to unauthorized users, leading to data leakage.
+
+A Story: The Library Portal Leak
+
+Imagine a university library portal, MyLibrary, where students can log in to access their personal profiles, borrow books, and view payment details.
+
+The Vulnerability
+
+Anna logs in to her library account to check her borrowed books. The URL of her profile page is:
+
+https://mylibrary.com/user/profile
+
+The portal does not cache sensitive pages like the profile page. However, Anna notices she can add an arbitrary file extension to the URL:
+
+https://mylibrary.com/user/profile.html
+
+When accessing this modified URL, the server still shows her profile, but now it gets cached because .html files are considered static resources by the caching mechanism.
+
+The Exploit
+
+Anna shares this URL with her friend Bob:
+
+https://mylibrary.com/user/profile.html
+
+When Bob accesses the link, the cached version of Anna’s profile loads, exposing her sensitive information.
+
+Real-Life Impact of Web Cache Deception
+
+Web cache deception can lead to:
+
+Data Leakage: Personal or confidential information is exposed to unauthorized users.
+
+Session Hijacking: Cached session tokens can be exploited by attackers.
+
+Regulatory Violations: Breaches of data privacy regulations, such as GDPR or HIPAA.
+
+How to Prevent Web Cache Deception
+
+1. Set Proper Cache-Control Headers
+
+Explicitly configure caching rules for sensitive pages:
+
+Cache-Control: no-store, no-cache, must-revalidate
+
+2. Validate URL Structures
+
+Reject unexpected or arbitrary file extensions in URLs.
+
+Use strict routing rules to ensure sensitive endpoints cannot be manipulated.
+
+3. Segregate Static and Dynamic Content
+
+Store static files (e.g., .html, .css, .js) on a separate domain or subdomain.
+
+Ensure dynamic pages always reside on non-cached routes.
+
+4. Monitor and Test Caching Mechanisms
+
+Regularly audit caching configurations to ensure sensitive data is not exposed.
+
+Use tools like Burp Suite to test for caching vulnerabilities.
+
+5. Educate Development Teams
+
+Train teams to understand web caching mechanisms and potential pitfalls.
+
+Conclusion
+
+Web cache deception exploits the trust between web servers and caching mechanisms, leading to unintended data exposure. By understanding its risks and implementing robust security practices, developers can ensure sensitive data remains protected.
+
+Stay vigilant, regularly audit your caching policies, and safeguard your users’ data from deceptive attacks. Prevention is always better than cure.
+
+Happy coding, and stay secure!
