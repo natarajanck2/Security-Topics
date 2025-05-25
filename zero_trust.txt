@@ -1,0 +1,87 @@
+Zero Trust is a cybersecurity model that operates on the principle of "never trust, always verify." It assumes that threats can come from anywhere—inside or outside an organization—and enforces strict verification for every user and device trying to access a system, regardless of their location.
+
+Why Zero Trust?
+In traditional security models, a "castle-and-moat" approach was used. Once someone was inside the network, they were often trusted with minimal checks. This model is outdated because:
+
+Remote work and cloud adoption have blurred network perimeters.
+
+Insider threats and advanced cyberattacks can exploit this trust.
+
+Zero Trust eliminates implicit trust by requiring continuous verification of identity, devices, and access levels.
+
+Key Principles of Zero Trust
+Verify Every Access Request:
+Authenticate every user or device, regardless of whether they are inside or outside the network.
+
+Least Privilege Access:
+Only grant access to the data or systems necessary for a specific task.
+
+Assume Breach:
+Operate under the assumption that a breach has already occurred or will occur.
+
+Continuous Monitoring:
+Continuously monitor user behavior and device health to detect anomalies.
+
+A Real-Life Story Example: Kavin's Cafe
+The Traditional Way (Castle-and-Moat Approach)
+Kavin owns a popular cafe that offers free Wi-Fi to customers. Previously, he only used a simple password for the Wi-Fi, and once a customer connected, they had access to the network. This meant:
+
+Employees accessing the POS (Point of Sale) system shared the same network as customers.
+
+If one customer’s device was infected, it could potentially compromise the entire network.
+
+One day, a customer unknowingly brought a device infected with malware. This malware spread through the network, causing the POS system to crash and exposing sensitive customer data.
+
+The Zero Trust Approach
+After the incident, Kavin adopted a Zero Trust model for his network:
+
+Separate Networks:
+
+Created two networks: one for customers and one for employees.
+
+Verification Before Access:
+
+Customers now access the Wi-Fi through a captive portal requiring authentication.
+
+Employees need a secure VPN and multi-factor authentication (MFA) to access the POS system.
+
+Least Privilege:
+
+Only the manager has admin access to sensitive POS data. Employees can only access basic functions.
+
+Continuous Monitoring:
+
+Kavin installed monitoring software to detect unusual behavior on the network, such as devices trying to access restricted areas.
+
+How Zero Trust Helped Kavin
+One day, a customer again connected a device infected with malware. However, because of network segmentation, the malware was confined to the customer network and couldn't reach the employee network or the POS system. The continuous monitoring system alerted Kavin, who was able to block the device immediately.
+
+How Zero Trust Works in Technology
+Authentication:
+
+Use MFA, biometrics, or hardware tokens to ensure user identity.
+
+Access Control:
+
+Implement role-based access control (RBAC) to limit permissions.
+
+Network Segmentation:
+
+Separate networks for sensitive systems, ensuring breaches are contained.
+
+Monitoring and Analytics:
+
+Employ tools to monitor user behavior, device health, and detect anomalies.
+
+Practical Applications of Zero Trust
+Remote Work:
+Employees working remotely must authenticate themselves before accessing company resources, even if they are using a company-provided device.
+
+Cloud Security:
+Cloud-based systems implement Zero Trust to ensure data security, verifying users and devices accessing the cloud.
+
+IoT Devices:
+IoT devices in a smart home or workplace are secured under a Zero Trust model to prevent unauthorized access or breaches.
+
+Conclusion
+Zero Trust is a proactive approach to cybersecurity, ensuring that no entity—internal or external—is trusted by default. By implementing continuous verification and least privilege principles, Zero Trust minimizes the risk of breaches and protects sensitive systems. In a world of increasing cyber threats, adopting Zero Trust is essential for organizations, businesses, and even individuals.
